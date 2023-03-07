@@ -23196,10 +23196,9 @@ hr.horizontal.gray-light {
   z-index: 1;
 }
 
-.navbar.navbar-transparent .nav-link,
+/* .navbar.navbar-transparent .nav-link,
 .navbar.navbar-transparent .nav-link i {
-  color: #fff;
-}
+} */
 
 .navbar.navbar-transparent .nav-link:hover,
 .navbar.navbar-transparent .nav-link:focus {
