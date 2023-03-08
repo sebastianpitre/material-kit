@@ -1,6 +1,6 @@
 <!--
 =========================================================
-* Material Kit 2 - v3.0.4
+* <span class="text-dark font-weight-bold"><span class="text-success">Bio</span>Software</span> - v3.0.4
 =========================================================
 
 * Product Page:  https://www.creative-tim.com/product/material-kit 
@@ -37,7 +37,7 @@
 <body class="about-us bg-gray-100">
     <!-- Navbar Transparent -->
     <nav class="navbar  navbar-expand-lg position-fixed top-0 z-index-3 w-100 shadow-none my-0 navbar-transparent ">
-      <div class="container bg-white  shadow-dark border-radius-xl" style="border-radius: 30px; height: 6vh;">
+      <div class="container bg-white  shadow border-radius-xl" style="border-radius: 30px; height: 6vh;">
       <a class="navbar-brand  text-dark " href=" https://demos.creative-tim.com/now-ui-design-system-pro/presentation.html " rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
         <img class="material-icons w-15 ps-1" src="../assets/img/logo-bio.svg" alt="">
         <span class="text-dark font-weight-bold"><span class="text-success">Bio</span>Software</span>
@@ -960,12 +960,20 @@
       <span class="text-sm">All about overview, quick start, license and contents</span>
       </div>
       </div>
-      </a>
+      </a>  
       </div>
       </div>
       </div>
       </li>
       </ul>
+      <div class="row text-center w-40 py-8 mt-3">
+        <div class="col-8 mx-auto">
+          <div class="input-group input-group-dynamic mb-4">
+            <span class="input-group-text"><i class="fas fa-search" aria-hidden="true"></i></span>
+            <input class="form-control" placeholder="Buscar Especies" type="text" >
+          </div>
+        </div>
+      </div>      
       <ul class="navbar-nav d-lg-block d-none">
       <li class="nav-item">
       <a href="https://www.creative-tim.com/product/now-ui-design-system-pro#pricingCard" class="btn btn-sm  bg-gradient-success  btn-round mb-0 me-1">Iniciar sesión</a>
@@ -977,13 +985,13 @@
     <!-- End Navbar -->
 
     <header>
-      <div class="page-header min-vh-50 zoom" style="background-image: url(&quot;../assets/fondos/ft (4).jpg&quot;); background-position-y: 55%;">
+      <div class="page-header min-vh-50" style="background-image: url(&quot;../assets/fondos/header1.jpg&quot;); background-position-y: 55%">
       <span class="mask bg-dark opacity-6"></span>
       <div class="container">
       <div class="row">
       <div class="col-lg-8 mx-auto text-white text-center">
       <h1 class="text-white">Book your new expericence</h1>
-      <p class="lead animate-text" id="animate-text1">An arrangement you make to have a hotel room, tickets, etc. at a particular time in the future:</p>
+      <p class="lead animate-text" id="animate-text1">Mapas, estadísticas y fotos para caulquier especie de aves en el Centro Biotenologico Del Caribe.</p>
       </div>
       </div>
       </div>
@@ -1005,7 +1013,7 @@
                 <h6>Areas Caracterizadas</h6>
               </div>
               <div class="col-md-3">
-                <h1 class="text-gradient text-success"><span id="state3" countTo="76">0</span></h1>
+                <h1 class="text-gradient text-success"><span id="state3" countTo="768">0</span></h1>
                 <h6>Registros Globales</h6>
               </div>
             </div>
@@ -1081,7 +1089,7 @@
         text1.innerHTML = "";
 
         //Declaramos una varible en la que asignaremos un valor para que sea el tiempo en ms que durará la función setTimeout
-        const speed = 40;
+        const speed = 25;
         let i = 0;
 
         //Esta función recorre todos los caracteres nuestro texto
@@ -1105,7 +1113,7 @@
       <div class="card card-blog card-plain">
       <div class="position-relative">
       <a class="d-block">
-      <img src="../assets/img/house.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg zoom">
+      <img src="../assets/img/page1.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
       </a>
       </div>
       <div class="card-body px-1 pt-3">
@@ -1126,7 +1134,7 @@
       <div class="card card-blog card-plain">
       <div class="position-relative">
       <a class="d-block">
-      <img src="../assets/img/pool.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+      <img src="../assets/img/page2.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
       </a>
       </div>
       <div class="card-body px-1 pt-3">
@@ -1147,7 +1155,7 @@
       <div class="card card-blog card-plain">
       <div class="position-relative">
       <a class="d-block">
-      <img src="../assets/img/antalya.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+      <img src="../assets/img/page5.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
       </a>
       </div>
       <div class="card-body px-1 pt-3">
@@ -1431,9 +1439,9 @@
         <div class="col-md-3 mb-4 ms-auto">
           <div>
             <a href="https://www.creative-tim.com/product/material-kit">
-              <img src="../assets/img/logo-ct-dark.png" class="mb-3 footer-logo" alt="main_logo">
+              <img src="../assets/img/logo-bio.svg" class="mb-3 footer-logo" alt="main_logo">
             </a>
-            <h6 class="font-weight-bolder mb-4">Material Kit 2</h6>
+            <h6 class="font-weight-bolder mb-4"><span class="text-dark font-weight-bold"><span class="text-success">Bio</span>Software</span></h6>
           </div>
           <div>
             <ul class="d-flex flex-row ms-n3 nav">
@@ -1587,80 +1595,50 @@
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
-  <script>
-    // get the element to animate
-    var element = document.getElementById('count-stats');
-    var elementHeight = element.clientHeight;
-
-    // listen for scroll event and call animate function
-
-    document.addEventListener('scroll', animate);
-
-    // check if element is in view
-    function inView() {
-      // get window height
-      var windowHeight = window.innerHeight;
-      // get number of pixels that the document is scrolled
-      var scrollY = window.scrollY || window.pageYOffset;
-      // get current scroll position (distance from the top of the page to the bottom of the current viewport)
-      var scrollPosition = scrollY + windowHeight;
-      // get element position (distance from the top of the page to the bottom of the element)
-      var elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
-
-      // is scroll position greater than element position? (is element in view?)
-      if (scrollPosition > elementPosition) {
-        return true;
+  
+    <script type="text/javascript">
+    if (document.getElementById('state1')) {
+      const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+      if (!countUp.error) {
+        countUp.start();
+      } else {
+        console.error(countUp.error);
       }
-
-      return false;
+    }
+    if (document.getElementById('state2')) {
+      const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+      if (!countUp1.error) {
+        countUp1.start();
+      } else {
+        console.error(countUp1.error);
+      }
+    }
+    if (document.getElementById('state3')) {
+      const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+      if (!countUp2.error) {
+        countUp2.start();
+      } else {
+        console.error(countUp2.error);
+      };
     }
 
-    var animateComplete = true;
-    // animate element when it is in view
-    function animate() {
+    var el = document.getElementById('navbarPresentationShadow');
+    var distance = 58;
 
-      // is element in view?
-      if (inView()) {
-        if (animateComplete) {
-          if (document.getElementById('state1')) {
-            const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
-            if (!countUp.error) {
-              countUp.start();
-            } else {
-              console.error(countUp.error);
-            }
-          }
-          if (document.getElementById('state2')) {
-            const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
-            if (!countUp1.error) {
-              countUp1.start();
-            } else {
-              console.error(countUp1.error);
-            }
-          }
-          if (document.getElementById('state3')) {
-            const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
-            if (!countUp2.error) {
-              countUp2.start();
-            } else {
-              console.error(countUp2.error);
-            };
-          }
-          animateComplete = false;
-        }
+    function scrollNavbarShadow() {
+      if (this.pageYOffset > distance) {
+        el.classList.remove('shadow-none');
+        el.classList.add('shadow');
+      } else {
+        el.classList.add('shadow-none');
+        el.classList.remove('shadow');
       }
     }
 
-    if (document.getElementById('typed')) {
-      var typed = new Typed("#typed", {
-        stringsElement: '#typed-strings',
-        typeSpeed: 90,
-        backSpeed: 90,
-        backDelay: 200,
-        startDelay: 500,
-        loop: true
-      });
-    }
+    window.addEventListener("scroll", function() {
+      scrollNavbarShadow();
+    });
+  </script>
   </script>
   <script>
     if (document.getElementsByClassName('page-header')) {
