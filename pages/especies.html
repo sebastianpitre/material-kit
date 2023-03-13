@@ -21,6 +21,9 @@
   <title>
     Biosofware
   </title>
+  <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
   <!-- Nucleo Icons -->
@@ -39,7 +42,7 @@
     <div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
       <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
         <div class="container-fluid px-0">
-          <a class="navbar-brand font-weight-bolder ms-sm-3" href="https://demos.creative-tim.com/material-kit/index" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+          <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
             <img class="material-icons w-15 ps-1" src="../assets/img/logo-bio.svg" alt="">
             <span class="text-dark font-weight-bold"><span class="text-success">Bio</span>Software</span>
           </a>
@@ -437,7 +440,7 @@
                 <div class="mx-auto">
                   <div class="input-group input-group-dynamic">
                     <span class="input-group-text"><i class="fas fa-search" aria-hidden="true"></i></span>
-                    <input class="form-control" placeholder="Buscar Especies" type="text" >
+                    <input class="form-control" placeholder="Buscar Especies" type="text">
                   </div>
                 </div>
               </div>
@@ -455,13 +458,12 @@
     <!-- End Navbar -->
 
     <header>
-      <div class="page-header min-vh-50" style="background-image: url(&quot;../assets/fondos/header1.jpg&quot;); background-position-y: 55%">
+      <div class="page-header min-vh-25" style="background-image: url(&quot;../assets/img/page2.jpg&quot;); background-position-y: 32%">
       <span class="mask bg-dark opacity-6"></span>
       <div class="container">
       <div class="row">
-      <div class="col-lg-8 mx-auto text-white text-center">
-      <h1 class="text-white">Bienvenido a BioSofware</h1>
-      <p class="lead animate-text" id="animate-text1">Mapas, estadísticas y fotos para caulquier especie de aves en el Centro Biotenológico Del Caribe.</p>
+      <div class="col-lg-7 mx-auto text-white text-center"><br><br><br>
+      <h1 class="text-white" id="animate-text1">Invetario de las aves del Centro Biotenológico Del Caribe.</h1>
       </div>
       </div>
       </div>
@@ -469,27 +471,6 @@
       </header>
   <!-- -------- END HEADER 7 w/ text and video ------- -->
   <div class="card card-body ">
-    <div class="container">
-      <div class="row bg-white shadow mt-n6 border-radius-lg mx-sm-0 mx-1 position-relative">
-      
-        <section class="" id="count-stats">
-            <div class="row justify-content-center text-center">
-              <div class="col-md-3">
-                <h1 class="text-gradient text-success"> <span id="state1" countTo="100">0</span></h1>
-                <h6>Especies Registradas</h6>
-              </div>
-              <div class="col-md-3">
-                <h1 class="text-gradient text-success"><span id="state2" countTo="8">0</span></h1>
-                <h6>Areas Caracterizadas</h6>
-              </div>
-              <div class="col-md-3">
-                <h1 class="text-gradient text-success"><span id="state3" countTo="768">0</span></h1>
-                <h6>Observaciones</h6>
-              </div>
-            </div>
-        </section>
-      </div>
-      </div>
 <!-- Estilos de animacion de texto -->
       <style >
         .animate-text {
@@ -576,54 +557,366 @@
 
       </script>
 
-    <section class="py-4">
-    <div class=" container">
-      <div class="row justify-content-center">
-      <div class="card mx-3 my-2 col-lg-4 col-md-6">
-      <div class="card card-blog card-plain">
-      <div class="position-relative">
-      <a class="d-block">
-      <img src="../assets/img/page1.jpg" alt="img-blur-shadow" class="  img-fluid shadow border-radius-lg">
-      </a>
-      </div>
-      <div class="card-body px-1 pt-3">
-      <p class="text-gradient text-success mb-2 text-sm">Diversidad de especies.</p>
-      <a href="javascript:;">
-      <h5>
-      BUSCAR POR ESPECIES
-      </h5>
-      </a>
-      <p>
-        Explorar aves registradas en el CBC.
-      </p>
-      <button type="button" class="btn btn-outline-success btn-sm">Explorar</button>
-      </div>
-      </div>
-      </div>
-      <div class="card mx-3 my-2 col-lg-4 col-md-6">
-      <div class="card card-blog card-plain">
-      <div class="position-relative">
-      <a class="d-block">
-      <img src="../assets/img/mapacbc.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-      </a>
-      </div>
-      <div class="card-body px-1 pt-3">
-      <p class="text-gradient text-success mb-2 text-sm">Areas del CBC.</p>
-      <a href="javascript:;">
-      <h5>
-      EXPLORAR AREAS
-      </h5>
-      </a>
-      <p>
-      Consulta cantidad de aves por area.
-      </p>
-      <button type="button" class="btn btn-outline-success btn-sm">Explorar</button>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-    </section>
+      <table id="example" class="display" >
+        <thead>
+            <tr>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Fotografía</th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Nombre Común</th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Nombre Cientifico</th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Antropica <br><span class="text-primary text-xxl">99</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Acuicultura <br><span class="text-primary text-xxl">56</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Espc. Menores <br><span class="text-primary text-xxl">149</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Ganadaría <br><span class="text-primary text-xxl">77</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Vivero <br><span class="text-primary text-xxl">46</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Cultivo <br><span class="text-primary text-xxl">456</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Bosque <br><span class="text-primary text-xxl">83</span></th>
+              <th class="text-uppercase text-primary text-xxs font-weight-bolder text-center opacity-7 ps-2">Total de individuos <br>por especie</th>
+              <th></th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+                  <img src="../assets/img/air-bnb.jpg" style="width: 110px; height:100px;" class="" alt="GUACAMAYA">
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Ara ararauna</p>
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Ara ararauna</p>
+            </td>
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">12</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">43</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">33</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">50</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">14</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">7</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">21</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs text-primary font-weight-bold">65</span>
+                </div>
+            </td>
+
+            <td class="align-middle  text-center">
+              <a class="btn btn-link text-dark px-2 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i></a>
+              <a class="btn btn-link text-danger text-gradient px-2 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2" aria-hidden="true"></i></a>
+          </td>
+          </tr>
+          <tr>
+            <td>
+                  <img src="../assets/img/air-bnb.jpg" style="width: 110px; height:100px;" class="" alt="GUACAMAYA">
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Ara ararauna</p>
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Ara ararauna</p>
+            </td>
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">12</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">43</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">33</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">50</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">14</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">7</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">21</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs text-primary font-weight-bold">65</span>
+                </div>
+            </td>
+
+            <td class="align-middle  text-center">
+              <a class="btn btn-link text-dark px-2 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i></a>
+              <a class="btn btn-link text-danger text-gradient px-2 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2" aria-hidden="true"></i></a>
+          </td>
+          </tr>
+          <tr>
+            <td>
+                  <img src="../assets/img/air-bnb.jpg" style="width: 110px; height:100px;" class="" alt="GUACAMAYA">
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Arayua ararauna</p>
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Ara ararauna</p>
+            </td>
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">12</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">43</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">33</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">50</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">14</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">7</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">21</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs text-primary font-weight-bold">65</span>
+                </div>
+            </td>
+
+            <td class="align-middle  text-center">
+              <a class="btn btn-link text-dark px-2 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i></a>
+              <a class="btn btn-link text-danger text-gradient px-2 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2" aria-hidden="true"></i></a>
+          </td>
+          </tr>
+          <tr>
+            <td>
+                  <img src="../assets/img/air-bnb.jpg" style="width: 110px; height:100px;" class="" alt="GUACAMAYA">
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Ara ararauna</p>
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Ara ararauna</p>
+            </td>
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">12</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">43</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">33</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">50</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">14</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">7</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">21</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs text-primary font-weight-bold">65</span>
+                </div>
+            </td>
+
+            <td class="align-middle  text-center">
+              <a class="btn btn-link text-dark px-2 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i></a>
+              <a class="btn btn-link text-danger text-gradient px-2 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2" aria-hidden="true"></i></a>
+          </td>
+          </tr>
+          <tr>
+            <td>
+                  <img src="../assets/img/air-bnb.jpg" style="width: 110px; height:100px;" class="" alt="GUACAMAYA">
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Ara ararauna</p>
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Ara ararauna</p>
+            </td>
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">12</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">43</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">33</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">50</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">14</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">7</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs font-weight-bold">21</span>
+                </div>
+            </td>
+
+            <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="me-2 text-xs text-primary font-weight-bold">65</span>
+                </div>
+            </td>
+
+            <td class="align-middle  text-center">
+              <a class="btn btn-link text-dark px-2 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i></a>
+              <a class="btn btn-link text-danger text-gradient px-2 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2" aria-hidden="true"></i></a>
+          </td>
+          </tr>
+          
+
+<!-- separador filas -->
+
+        </tbody>
+        <tfoot>
+            <tr>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Fotografía</th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Nombre Común</th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Nombre Cientifico</th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Antropica <br><span class="text-primary text-xxl">99</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Acuicultura <br><span class="text-primary text-xxl">56</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Espc. Menores <br><span class="text-primary text-xxl">149</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Ganadaría <br><span class="text-primary text-xxl">77</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Vivero <br><span class="text-primary text-xxl">46</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Cultivo <br><span class="text-primary text-xxl">456</span></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Bosque <br><span class="text-primary text-xxl">83</span></th>
+              <th class="text-uppercase text-primary text-xxs font-weight-bolder text-center opacity-7 ps-2">Total de individuos <br>por especie</th>
+              <th></th>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <script>$(document).ready(function() {
+        $('#example').DataTable();
+    } );</script>
+
     <!-- Section with four success areas left & one card right with image and waves -->
 
     <!-- END Section with four success areas left & one card right with image and waves -->
@@ -722,12 +1015,13 @@
         </div>
       </div>
     </section>
+    
   <footer class="footer pt-5 mt-5">
     <div class="container">
       <div class=" row">
         <div class="col-md-3 mb-4 ms-auto">
           <div>
-            <a href="https://www.creative-tim.com/product/material-kit">
+            <a href="../index.html">
               <img src="../assets/img/logo-bio.svg" class="mb-3 footer-logo" alt="main_logo">
             </a>
             <h6 class="font-weight-bolder mb-4"><span class="text-dark font-weight-bold"><span class="text-success">Bio</span>Software</span></h6>
@@ -893,8 +1187,62 @@
         console.error(countUp1.error);
       }
     }
+    
     if (document.getElementById('state3')) {
-      const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+      const countUp1 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+      if (!countUp1.error) {
+        countUp1.start();
+      } else {
+        console.error(countUp1.error);
+      }
+    }
+    
+    if (document.getElementById('state4')) {
+      const countUp1 = new CountUp('state4', document.getElementById("state4").getAttribute("countTo"));
+      if (!countUp1.error) {
+        countUp1.start();
+      } else {
+        console.error(countUp1.error);
+      }
+    }
+    
+    if (document.getElementById('state5')) {
+      const countUp1 = new CountUp('state5', document.getElementById("state5").getAttribute("countTo"));
+      if (!countUp1.error) {
+        countUp1.start();
+      } else {
+        console.error(countUp1.error);
+      }
+    }
+    
+    if (document.getElementById('state6')) {
+      const countUp1 = new CountUp('state6', document.getElementById("state6").getAttribute("countTo"));
+      if (!countUp1.error) {
+        countUp1.start();
+      } else {
+        console.error(countUp1.error);
+      }
+    }
+    
+    if (document.getElementById('state7')) {
+      const countUp1 = new CountUp('state7', document.getElementById("state7").getAttribute("countTo"));
+      if (!countUp1.error) {
+        countUp1.start();
+      } else {
+        console.error(countUp1.error);
+      }
+    }
+    
+    if (document.getElementById('state8')) {
+      const countUp1 = new CountUp('state8', document.getElementById("state8").getAttribute("countTo"));
+      if (!countUp1.error) {
+        countUp1.start();
+      } else {
+        console.error(countUp1.error);
+      }
+    }
+    if (document.getElementById('state9')) {
+      const countUp2 = new CountUp('state9', document.getElementById("state9").getAttribute("countTo"));
       if (!countUp2.error) {
         countUp2.start();
       } else {
@@ -919,7 +1267,6 @@
       scrollNavbarShadow();
     });
   </script>
-  </script>
   <script>
     if (document.getElementsByClassName('page-header')) {
       window.onscroll = debounce(function() {
@@ -930,6 +1277,8 @@
       }, 6);
     }
   </script>
+
+  
 </body>
 
 </html>
