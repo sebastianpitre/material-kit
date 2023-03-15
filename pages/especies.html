@@ -21,6 +21,8 @@
   <title>
     Biosofware
   </title>
+  <link rel="stylesheet" href="tabla.css">
+
   <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -458,8 +460,8 @@
     <!-- End Navbar -->
 
     <header>
-      <div class="page-header min-vh-25" style="background-image: url(&quot;../assets/img/page2.jpg&quot;); background-position-y: 32%">
-      <span class="mask bg-dark opacity-6"></span>
+      <div class="page-header min-vh-25" style="background-image: url(&quot;../assets/img/especies2.jpg&quot;); background-position-y: 28%">
+      <span class="mask bg-dark opacity-4"></span>
       <div class="container">
       <div class="row">
       <div class="col-lg-7 mx-auto text-white text-center"><br><br><br>
@@ -559,301 +561,138 @@
       <section class="pb-5 position-relative  mx-n3">
         <div class="container">
           <div class="row">
-
-            <table id="example" class="display" >
+            <table id="example" class="display" style="width:100%">
               <thead>
                   <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Fotografía</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Nombre Común</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Nombre Cientifico</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Amenaza</th>
-                    <th></th>
+                      <th class="text-center opacity-9">Fotografia</th>
+                      <th class="text-center opacity-9">Nombre común</th>
+                      <th class="text-center opacity-9">Nombre cientifico</th>
+                      <th class="text-center opacity-9">Amenaza</th>
+                      <th class="text-center opacity-9">Descipción</th>
                   </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                        <img src="../assets/img/air-bnb.jpg" style="width: 110px; height:100px;" class="" alt="GUACAMAYA">
-                  </td>
-                  <td>
-                    <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Ara ararauna</p>
-                  </td>
-                  <td>
-                    <p class="text-sm font-weight-bold mb-0 text-capitalize text-center">Ara ararauna</p>
-                  </td>
-      
-                  <td class="align-middle text-center" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="top">
-                    <div class="d-flex align-items-center justify-content-center">
-                      <span class="me-2 text-xs font-weight-bold">21</span>
-                      </div>
-                  </td>
-      
-                  <td class="align-middle  text-center">
-                    <a class="btn btn-link text-success px-2 mb-0" href="javascript:;"><i class="far fa-eye me-2" aria-hidden="true"></i></a>
-                </td>
-                </tr>
-      <!-- separador filas -->
-      
-              </tbody>
-              <tfoot>
+                  
                   <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Fotografía</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Nombre Común</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Nombre Cientifico</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Antropica</th>
-                    <th></th>
+                      <td>Doris Wilder</td>
+                      <td>Sales Assistant</td>
+                      <td>23</td>
+                      <td>2010/09/20</td>
+                      <td>$85,600</td>
                   </tr>
-              </tfoot>
-          </table>
+                  <tr>
+                      <td>Angelica Ramos</td>
+                      <td>Chief Executive Officer (CEO)</td>
+                      <td>47</td>
+                      <td>2009/10/09</td>
+                      <td>$1,200,000</td>
+                  </tr>
+                  <tr>
+                      <td>Gavin Joyce</td>
+                      <td>Developer</td>
+                      <td>42</td>
+                      <td>2010/12/22</td>
+                      <td>$92,575</td>
+                  </tr>
+                  <tr>
+                      <td>Jennifer Chang</td>
+                      <td>Regional Director</td>
+                      <td>28</td>
+                      <td>2010/11/14</td>
+                      <td>$357,650</td>
+                  </tr>
+                  <tr>
+                      <td>Brenden Wagner</td>
+                      <td>Software Engineer</td>
+                      <td>28</td>
+                      <td>2011/06/07</td>
+                      <td>$206,850</td>
+                  </tr>
+                  <tr>
+                      <td>Olivia Liang</td>
+                      <td>Support Engineer</td>
+                      <td>64</td>
+                      <td>2011/02/03</td>
+                      <td>$234,500</td>
+                  </tr>
+                  <tr>
+                      <td>Bruno Nash</td>
+                      <td>London</td>
+                      <td>38</td>
+                      <td>2011/05/03</td>
+                      <td>$163,500</td>
+                  </tr>
+                  <tr>
+                      <td>Sakura Yamamoto</td>
+                      <td>Tokyo</td>
+                      <td>37</td>
+                      <td>2009/08/19</td>
+                      <td>$139,575</td>
+                  </tr>
+                  <tr>
+                      <td>Thor Walton</td>
+                      <td>New York</td>
+                      <td>61</td>
+                      <td>2013/08/11</td>
+                      <td>$98,540</td>
+                  </tr>
+                  <tr>
+                      <td>Finn Camacho</td>
+                      <td>San Francisco</td>
+                      <td>47</td>
+                      <td>2009/07/07</td>
+                      <td>$87,500</td>
+                  </tr>
+                  <tr>
+                      <td>Serge Baldwin</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                  </tr>
+                  <tr>
+                      <td>Donna Snider</td>
+                      <td>New York</td>
+                      <td>27</td>
+                      <td>2011/01/25</td>
+                      <td>$112,000</td>
+                  </tr>
+              </tbody>               
+            </table> 
 
+    <script>
+    let temp = $("#btn1").clone();
+    $("#btn1").click(function(){
+      $("#btn1").after(temp);
+    });
+
+    $(document).ready(function(){
+      var table = $('#example').DataTable({
+      orderCellsTop: true,
+      fixedHeader: true 
+      });
+
+      //Creamos una fila en el head de la tabla y lo clonamos para cada columna
+      $('#example thead tr').clone(true).appendTo( '#example thead' );
+
+      $('#example thead tr:eq(1) th').each( function (i) {
+          var title = $(this).text(); //es el nombre de la columna
+          $(this).html( '<input type="text" placeholder="Filtrar por '+title+'" />' );
+
+          $( 'input', this ).on( 'keyup change', function () {
+              if ( table.column(i).search() !== this.value ) {
+                  table
+                      .column(i)
+                      .search( this.value )
+                      .draw();
+              }
+          } );
+      } );   
+    });
+    </script>
           </div>
         </div>
       </section>
-    
-    <script>$(document).ready(function() {
-        $('#example').DataTable();
-    } );</script>
-
-    <!-- Section with four success areas left & one card right with image and waves -->
-
-    <!-- END Section with four success areas left & one card right with image and waves -->
-    <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
-    <section class="pb-5 position-relative bg-gradient-dark mx-n3">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 text-start mb-5 mt-5">
-            <h3 class="text-white z-index-1 position-relative">The Executive Team</h3>
-            <p class="text-white opacity-8 mb-0">There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 col-12">
-            <div class="card card-profile mt-4">
-              <div class="row">
-                <div class="col-lg-4 col-md-6 col-12 mt-n5">
-                  <a href="javascript:;">
-                    <div class="p-3 pe-md-0">
-                      <img class="w-100 border-radius-md shadow-lg" src="../assets/img/team-5.jpg" alt="image">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-8 col-md-6 col-12 my-auto">
-                  <div class="card-body ps-lg-0">
-                    <h5 class="mb-0">Emma Roberts</h5>
-                    <h6 class="text-success">UI Designer</h6>
-                    <p class="mb-0">Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-12">
-            <div class="card card-profile mt-lg-4 mt-5">
-              <div class="row">
-                <div class="col-lg-4 col-md-6 col-12 mt-n5">
-                  <a href="javascript:;">
-                    <div class="p-3 pe-md-0">
-                      <img class="w-100 border-radius-md shadow-lg" src="../assets/img/bruce-mars.jpg" alt="image">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-8 col-md-6 col-12 my-auto">
-                  <div class="card-body ps-lg-0">
-                    <h5 class="mb-0">William Pearce</h5>
-                    <h6 class="text-success">Boss</h6>
-                    <p class="mb-0">Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col-lg-6 col-12">
-            <div class="card card-profile mt-4 z-index-2">
-              <div class="row">
-                <div class="col-lg-4 col-md-6 col-12 mt-n5">
-                  <a href="javascript:;">
-                    <div class="p-3 pe-md-0">
-                      <img class="w-100 border-radius-md shadow-lg" src="../assets/img/ivana-squares.jpg" alt="image">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-8 col-md-6 col-12 my-auto">
-                  <div class="card-body ps-lg-0">
-                    <h5 class="mb-0">Ivana Flow</h5>
-                    <h6 class="text-success">Athlete</h6>
-                    <p class="mb-0">Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-12">
-            <div class="card card-profile mt-lg-4 mt-5 z-index-2">
-              <div class="row">
-                <div class="col-lg-4 col-md-6 col-12 mt-n5">
-                  <a href="javascript:;">
-                    <div class="p-3 pe-md-0">
-                      <img class="w-100 border-radius-md shadow-lg" src="../assets/img/ivana-square.jpg" alt="image">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-8 col-md-6 col-12 my-auto">
-                  <div class="card-body ps-lg-0">
-                    <h5 class="mb-0">Marquez Garcia</h5>
-                    <h6 class="text-success">JS Developer</h6>
-                    <p class="mb-0">Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-  <footer class="footer pt-5 mt-5">
-    <div class="container">
-      <div class=" row">
-        <div class="col-md-3 mb-4 ms-auto">
-          <div>
-            <a href="../index.html">
-              <img src="../assets/img/logo-bio.svg" class="mb-3 footer-logo" alt="main_logo">
-            </a>
-            <h6 class="font-weight-bolder mb-4"><span class="text-dark font-weight-bold"><span class="text-success">Bio</span>Software</span></h6>
-          </div>
-          <div>
-            <ul class="d-flex flex-row ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://www.facebook.com/CreativeTim" target="_blank">
-                  <i class="fab fa-facebook text-lg opacity-8"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://twitter.com/creativetim" target="_blank">
-                  <i class="fab fa-twitter text-lg opacity-8"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://dribbble.com/creativetim" target="_blank">
-                  <i class="fab fa-dribbble text-lg opacity-8"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://github.com/creativetimofficial" target="_blank">
-                  <i class="fab fa-github text-lg opacity-8"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w" target="_blank">
-                  <i class="fab fa-youtube text-lg opacity-8"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-2 col-sm-6 col-6 mb-4">
-          <div>
-            <h6 class="text-sm">Company</h6>
-            <ul class="flex-column ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/presentation" target="_blank">
-                  About Us
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/templates/free" target="_blank">
-                  Freebies
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/templates/premium" target="_blank">
-                  Premium Tools
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/blog" target="_blank">
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-2 col-sm-6 col-6 mb-4">
-          <div>
-            <h6 class="text-sm">Resources</h6>
-            <ul class="flex-column ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link" href="https://iradesign.io/" target="_blank">
-                  Illustrations
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/bits" target="_blank">
-                  Bits & Snippets
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/affiliates/new" target="_blank">
-                  Affiliate Program
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-2 col-sm-6 col-6 mb-4">
-          <div>
-            <h6 class="text-sm">Help & Support</h6>
-            <ul class="flex-column ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/contact-us" target="_blank">
-                  Contact Us
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/knowledge-center" target="_blank">
-                  Knowledge Center
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://services.creative-tim.com/?ref=ct-mk2-footer" target="_blank">
-                  Custom Development
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/sponsorships" target="_blank">
-                  Sponsorships
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-2 col-sm-6 col-6 mb-4 me-auto">
-          <div>
-            <h6 class="text-sm">Legal</h6>
-            <ul class="flex-column ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/knowledge-center/terms-of-service" target="_blank">
-                  Terms & Conditions
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/knowledge-center/privacy-policy" target="_blank">
-                  Privacy Policy
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/license" target="_blank">
-                  Licenses (EULA)
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        </div>
-    </div>
-  </footer>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
@@ -866,6 +705,10 @@
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="tabla.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script> 
   
     <script type="text/javascript">
     if (document.getElementById('state1')) {
