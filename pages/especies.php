@@ -10,6 +10,16 @@
 =========================================================
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+<?php 
+    include("conexion.php");
+    $con=conectar();
+
+    $sql="SELECT *  FROM alumno";
+    $query=mysqli_query($con,$sql);
+
+    $row=mysqli_fetch_array($query);
+?>
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 
@@ -561,103 +571,40 @@
       <section class="pb-5 position-relative  mx-n3">
         <div class="container">
           <div class="row">
-            <table id="example" class="display" style="width:100%">
+            <table id="example" class="display .table-responsive-md" style="width:100%">
               <thead>
                   <tr>
-                      <th class="text-center opacity-9">Fotografia</th>
+                    <th class="text-center opacity-9 ">id</th>
+                      <th class="text-center opacity-9">Codigo api</th>
                       <th class="text-center opacity-9">Nombre común</th>
                       <th class="text-center opacity-9">Nombre cientifico</th>
-                      <th class="text-center opacity-9">Amenaza</th>
                       <th class="text-center opacity-9">Descipción</th>
+                      <th></th>
                   </tr>
               </thead>
               <tbody>
-                  
+                <?php
+                while($row=mysqli_fetch_array($query)){
+            ?>
                   <tr>
-                      <td>Doris Wilder</td>
-                      <td>Sales Assistant</td>
-                      <td>23</td>
-                      <td>2010/09/20</td>
-                      <td>$85,600</td>
+                    <td><?php  echo $row['id_ave']?></td>
+                    <td><?php  echo $row['fotografia']?></td>
+                    <td><?php  echo $row['nombre_comun']?></td>
+                    <td><?php  echo $row['nombre_comun']?></td>
+                    <td><?php  echo $row['nombre_cientifico']?></td>
+                    <!-- <td><?php  echo $row['nombre_cientifico']?></td> -->
+                    <!-- <td><a href="actualizar.php?id=<?php echo $row['id_ave'] ?>" class="btn btn-info">Editar</a></td> -->
+                    <td>
+                      <a href="../crud/jvh-crud/delete.php?id=<?php echo $row['id_ave'] ?>" class="btn btn-danger">Delete</a> 
+                      <a href="actualizar.php?id=<?php echo $row['id_ave'] ?>" class="btn btn-info">Editar</a>
+                      <a href="https://xeno-canto.org/<?php  echo $row['fotografia']?>/embed?simple=1" class="btn btn-success" target="_blank">Escuchar</a>
+                      <a href="https://xeno-canto.org/<?php  echo $row['fotografia']?>/embed?simple=1" class="btn btn-success" target="_blank">Escuchar</a>
+                  </td>
                   </tr>
-                  <tr>
-                      <td>Angelica Ramos</td>
-                      <td>Chief Executive Officer (CEO)</td>
-                      <td>47</td>
-                      <td>2009/10/09</td>
-                      <td>$1,200,000</td>
-                  </tr>
-                  <tr>
-                      <td>Gavin Joyce</td>
-                      <td>Developer</td>
-                      <td>42</td>
-                      <td>2010/12/22</td>
-                      <td>$92,575</td>
-                  </tr>
-                  <tr>
-                      <td>Jennifer Chang</td>
-                      <td>Regional Director</td>
-                      <td>28</td>
-                      <td>2010/11/14</td>
-                      <td>$357,650</td>
-                  </tr>
-                  <tr>
-                      <td>Brenden Wagner</td>
-                      <td>Software Engineer</td>
-                      <td>28</td>
-                      <td>2011/06/07</td>
-                      <td>$206,850</td>
-                  </tr>
-                  <tr>
-                      <td>Olivia Liang</td>
-                      <td>Support Engineer</td>
-                      <td>64</td>
-                      <td>2011/02/03</td>
-                      <td>$234,500</td>
-                  </tr>
-                  <tr>
-                      <td>Bruno Nash</td>
-                      <td>London</td>
-                      <td>38</td>
-                      <td>2011/05/03</td>
-                      <td>$163,500</td>
-                  </tr>
-                  <tr>
-                      <td>Sakura Yamamoto</td>
-                      <td>Tokyo</td>
-                      <td>37</td>
-                      <td>2009/08/19</td>
-                      <td>$139,575</td>
-                  </tr>
-                  <tr>
-                      <td>Thor Walton</td>
-                      <td>New York</td>
-                      <td>61</td>
-                      <td>2013/08/11</td>
-                      <td>$98,540</td>
-                  </tr>
-                  <tr>
-                      <td>Finn Camacho</td>
-                      <td>San Francisco</td>
-                      <td>47</td>
-                      <td>2009/07/07</td>
-                      <td>$87,500</td>
-                  </tr>
-                  <tr>
-                      <td>Serge Baldwin</td>
-                      <td>Singapore</td>
-                      <td>64</td>
-                      <td>2012/04/09</td>
-                      <td>$138,575</td>
-                  </tr>
-                  <tr>
-                      <td>Donna Snider</td>
-                      <td>New York</td>
-                      <td>27</td>
-                      <td>2011/01/25</td>
-                      <td>$112,000</td>
-                  </tr>
-              </tbody>               
+                  <?php 
+                    }
+                ?>
+              </tbody>
             </table> 
 
     <script>
@@ -673,11 +620,11 @@
       });
 
       //Creamos una fila en el head de la tabla y lo clonamos para cada columna
-      $('#example thead tr').clone(true).appendTo( '#example thead' );
+      $('#example thead td').clone(true).appendTo( '#example thead' );
 
       $('#example thead tr:eq(1) th').each( function (i) {
           var title = $(this).text(); //es el nombre de la columna
-          $(this).html( '<input type="text" placeholder="Filtrar por '+title+'" />' );
+          $(this).html( '<input type="text" placeholder="Filtrar.. '+title+'" />' );
 
           $( 'input', this ).on( 'keyup change', function () {
               if ( table.column(i).search() !== this.value ) {

@@ -25,8 +25,7 @@
                             <h1>Ingrese datos</h1>
                                 <form action="insertar.php" method="POST">
 
-                                    <input type="text" class="form-control mb-3" name="id_ave" placeholder="cod estudiante">
-                                    <input type="text" class="form-control mb-3" name="fotografia" placeholder="fotografia">
+                                    <input type="text" class="form-control mb-3" name="fotografia" placeholder="codigo api">
                                     <input type="text" class="form-control mb-3" name="nombre_comun" placeholder="nombre_comun">
                                     <input type="text" class="form-control mb-3" name="nombre_cientifico" placeholder="nombre_cientifico">
                                     
