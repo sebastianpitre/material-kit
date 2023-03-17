@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Búsqueda de aves en Xeno-Canto</title>
+  </head>
+  <body>
+    <h1>Búsqueda de aves en Xeno-Canto</h1>
+    <form id="search-form">
+      <label for="bird-name">Nombre del ave:</label>
+      <input type="text" id="bird-name" name="bird-name">
+      <button type="submit">Buscar</button>
+    </form>
+    <div id="results"></div>
+
+    <script>
+      const searchForm = document.getElementById('search-form');
+      const resultsDiv = document.getElementById('results');
+
+      searchForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const birdName = encodeURIComponent(document.getElementById('bird-name').value);
+        const url = `https://xeno-canto.org/api/2/recordings?query=${birdName}`;
+        
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            if (data.recordings.length > 0) {
+              const recording = data.recordings[0];
+              resultsDiv.innerHTML = '';
+
+              const title = document.createElement('h3');
+              title.textContent = recording.en;
+              resultsDiv.appendChild(title);
+
+              const audio = document.createElement('audio');
+              audio.setAttribute('controls', '');
+              const source = document.createElement('source');
+              source.setAttribute('src', recording.file);
+              audio.appendChild(source);
+              resultsDiv.appendChild(audio);
+
+              const species = document.createElement('p');
+              species.textContent = `Especie: ${recording.sp}`;
+              resultsDiv.appendChild(species);
+
+              const country = document.createElement('p');
+              country.textContent = `País: ${recording.cnt}`;
+              resultsDiv.appendChild(country);
+
+              const date = document.createElement('p');
+              date.textContent = `Fecha: ${recording.date}`;
+              resultsDiv.appendChild(date);
+
+              const duration = document.createElement('p');
+              duration.textContent = `Duración: ${recording.duration} segundos`;
+              resultsDiv.appendChild(duration);
+            } else {
+              resultsDiv.innerHTML = 'No se encontraron resultados.';
+            }
+          })
+          .catch(error => {
+            resultsDiv.innerHTML = `Ha ocurrido un error: ${error.message}`;
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -47,13 +47,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
-
-  <!-- <script>
-    function consulta(){
-      var birdName = "<?php  echo $row['nombre_cientifico']?>";
-      alert(birdName);
-    }
-  </script> -->
 </head>
 
 <body class="about-us bg-gray-100">
@@ -489,9 +482,8 @@
       </div>
       </header>
   <!-- -------- END HEADER 7 w/ text and video ------- -->
-  <div class="card card-body ">
 <!-- Estilos de animacion de texto -->
-      <style >
+    <style >
         .animate-text {
           letter-spacing: 0.075rem;
         }
@@ -550,9 +542,9 @@
           }
         }
         
-      </style>
+    </style>
 <!-- Escript de animacion de texto -->
-      <script>
+    <script>
         //Primero capturamos el elemento del DOM con el id que definimos en el html
         const text1 = document.getElementById("animate-text1");
         let str = text1.innerHTML;
@@ -574,46 +566,7 @@
         //Acá ejecutamos la función
         setTimeout(typeWriter, speed);
 
-      </script>
-      <section class="pb-5 position-relative  mx-n3">
-        <div class="container">
-          <div class="row">
-            <table id="example" class="display .table-responsive-md" style="width:100%">
-              <thead>
-                  <tr>
-                    <th class="text-center opacity-9 ">id</th>
-                      <th class="text-center opacity-9">Codigo api</th>
-                      <th class="text-center opacity-9">Nombre común</th>
-                      <th class="text-center opacity-9">Nombre cientifico</th>
-                      <th class="text-center opacity-9">Descipción</th>
-                      <th></th>
-                  </tr>
-              </thead>
-              <tbody>
-                <?php
-                while($row=mysqli_fetch_array($query)){
-            ?>
-                  <tr>
-                    <td><?php  echo $row['id_ave']?></td>
-                    <td><?php  echo $row['fotografia']?></td>
-                    <td><?php  echo $row['nombre_comun']?></td>
-                    <td><?php  echo $row['nombre_comun']?></td>
-                    <td><?php  echo $row['nombre_cientifico']?></td>
-                    <!-- <td><?php  echo $row['nombre_cientifico']?></td> -->
-                    <!-- <td><a href="actualizar.php?id=<?php echo $row['id_ave'] ?>" class="btn btn-info">Editar</a></td> -->
-                    <td>
-                      <a href="../crud/jvh-crud/delete.php?id=<?php echo $row['id_ave'] ?>" class="btn btn-danger">Delete</a> 
-                      <a href="actualizar.php?id=<?php echo $row['id_ave'] ?>" class="btn btn-info">Editar</a>
-                      <a href="https://xeno-canto.org/<?php  echo $row['fotografia']?>/embed?simple=1" class="btn btn-success" target="_blank">Escuchar</a>
-                      <a href="aves.php?id=<?php echo $row['id_ave'] ?>" class="btn btn-success">ver</a>
-                  </td>
-                  </tr>
-                  <?php 
-                    }
-                ?>
-              </tbody>
-            </table> 
-
+    </script>
     <script>
     let temp = $("#btn1").clone();
     $("#btn1").click(function(){
@@ -644,9 +597,69 @@
       } );   
     });
     </script>
+    <div class="card card-body ">
+    <section class="pb-5 position-relative  mx-n3">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="card p-0 rounded-3">
+          <img src="<?php  echo $row['fotografia']?>" alt="img-blur-shadow" class="img-fluid shadow rounded-3">
           </div>
-        </div>
-      </section>
+          </div>
+      <div class="col-md-6 mb-md-0 mb-4">
+      <h4 class="mb-0">Nombre Científico.</h4>
+      <h3><span class="me-2">-</span><em><?php  echo $row['nombre_cientifico']?></em></h3>
+        <h4 class="mb-0">Nombre Común.</h4>
+        <h5><span class="me-2">-</span><?php  echo $row['nombre_comun']?></h3>
+        <h4 class="mb-0">Descripción.</h4>
+        <p class="font-weight-bold">Esta pava casi amenazada es la única pava negra relativamente grande que habita en zonas montañosas. Se distribuye desde Venezuela a través de los andes hasta el centro-sur de Perú, también en la sierra nevada de Santa Marta en Colombia, país donde se distribuye de 400-2500m (Strewe, R. y C. Navarro, 2003).</p>
+      <form id="search-form">
+        <label for="bird-name">Nombre del ave:</label>
+        <input type="text" id="bird-name" value="Aburria aburri" name="bird-name">
+        <button type="submit">Buscar</button>
+      </form>
+      <div id="results"></div>
+  
+      <script>
+        const searchForm = document.getElementById('search-form');
+        const resultsDiv = document.getElementById('results');
+  
+        searchForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const birdName = encodeURIComponent(document.getElementById('bird-name').value);
+          const url = `https://xeno-canto.org/api/2/recordings?query=${birdName}`;
+          
+          fetch(url)
+            .then(response => response.json())
+            .then(data => {
+              if (data.recordings.length > 0) {
+                const recording = data.recordings[0];
+                resultsDiv.innerHTML = '';
+  
+                const title = document.createElement('h3');
+                title.textContent = recording.en;
+                resultsDiv.appendChild(title);
+  
+                const audio = document.createElement('audio');
+                audio.setAttribute('controls', '');
+                const source = document.createElement('source');
+                source.setAttribute('src', recording.file);
+                audio.appendChild(source);
+                resultsDiv.appendChild(audio);
+  
+              } else {
+                resultsDiv.innerHTML = 'No se encontraron resultados.';
+              }
+            })
+            .catch(error => {
+              resultsDiv.innerHTML = `Ha ocurrido un error: ${error.message}`;
+            });
+        });
+      </script>
+      </div>
+      </div>
+      </div>
+    </section>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
@@ -772,7 +785,6 @@
     }
   </script>
 
-  
   
 </body>
 
