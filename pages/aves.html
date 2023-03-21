@@ -10,16 +10,6 @@
 =========================================================
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
-
-<?php 
-    include("conexion.php");
-    $con=conectar();
-
-    $sql="SELECT *  FROM alumno";
-    $query=mysqli_query($con,$sql);
-
-    $row=mysqli_fetch_array($query);
-?>
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 
@@ -603,7 +593,7 @@
       <div class="row align-items-center">
         <div class="col-md-6">
           <div class="card p-0 rounded-3">
-          <img src="<?php  echo $row['fotografia']?>" alt="img-blur-shadow" class="img-fluid shadow rounded-3">
+          <img src="" alt="fotografia" class="img-fluid shadow rounded-3">
           </div>
           </div>
       <div class="col-md-6 mb-md-0 mb-4">

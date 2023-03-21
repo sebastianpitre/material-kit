@@ -10,16 +10,6 @@
 =========================================================
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
-
-<?php 
-    include("conexion.php");
-    $con=conectar();
-
-    $sql="SELECT *  FROM alumno";
-    $query=mysqli_query($con,$sql);
-
-    $row=mysqli_fetch_array($query);
-?>
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 
@@ -578,72 +568,55 @@
       <section class="pb-5 position-relative  mx-n3">
         <div class="container">
           <div class="row">
-            <table id="example" class="display .table-responsive-md" style="width:100%">
-              <thead>
-                  <tr>
-                    <th class="text-center opacity-9 ">id</th>
-                      <th class="text-center opacity-9">Codigo api</th>
-                      <th class="text-center opacity-9">Nombre común</th>
-                      <th class="text-center opacity-9">Nombre cientifico</th>
-                      <th class="text-center opacity-9">Descipción</th>
-                      <th></th>
-                  </tr>
-              </thead>
-              <tbody>
-                <?php
-                while($row=mysqli_fetch_array($query)){
-            ?>
-                  <tr>
-                    <td><?php  echo $row['id_ave']?></td>
-                    <td><?php  echo $row['fotografia']?></td>
-                    <td><?php  echo $row['nombre_comun']?></td>
-                    <td><?php  echo $row['nombre_comun']?></td>
-                    <td><?php  echo $row['nombre_cientifico']?></td>
-                    <!-- <td><?php  echo $row['nombre_cientifico']?></td> -->
-                    <!-- <td><a href="actualizar.php?id=<?php echo $row['id_ave'] ?>" class="btn btn-info">Editar</a></td> -->
-                    <td>
-                      <a href="../crud/jvh-crud/delete.php?id=<?php echo $row['id_ave'] ?>" class="btn btn-danger">Delete</a> 
-                      <a href="actualizar.php?id=<?php echo $row['id_ave'] ?>" class="btn btn-info">Editar</a>
-                      <a href="https://xeno-canto.org/<?php  echo $row['fotografia']?>/embed?simple=1" class="btn btn-success" target="_blank">Escuchar</a>
-                      <a href="aves.php?id=<?php echo $row['id_ave'] ?>" class="btn btn-success">ver</a>
-                  </td>
-                  </tr>
-                  <?php 
-                    }
-                ?>
-              </tbody>
-            </table> 
+          <div class="container">
+            <div class="col-9">
+                Lista de alumnos
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>nombre común</th>
+                            <th>nombre científico</th>
+                            <th>descripción</th>
+                            <th>Foto</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php 
+                            include "config/bd.php";
+                            $query=listar();
+                            $enumeracion=0;
+                            while($datos=mysqli_fetch_assoc($query)){
+                                $enumeracion++;
+                                $id=$datos['id'];
+                                $nombre_comun=$datos['nombre_comun'];
+                                $nombre_cientifico=$datos['nombre_cientifico'];
+                                $correo=$datos['descripcion'];
+                                $foto=$datos['foto'];
+                            
+                        ?>
+                        <tr>
+                            <td><?= $enumeracion?></td>
+                            <td><?= $nombre_comun?></td>
+                            <td><?= $nombre_cientifico?></td>
+                            <td><?= $correo?></td>
+                            <td><img style="max-height:50px;" src="data:image/jpg;base64,<?= base64_encode($foto)?>"></td>
+                            <td>
+                                <a class="btn btn-info" href="ver.php?id=<?=$id?>">Ver</a>
+                                <a class="btn btn-warning" href="editar.php?id=<?=$id?>">Actualizar</a>
+                                <a class="btn btn-danger" href="acciones/eliminar.php?id=<?=$id?>">Eliminar</a>
+                            </td>
+                        </tr>
 
-    <script>
-    let temp = $("#btn1").clone();
-    $("#btn1").click(function(){
-      $("#btn1").after(temp);
-    });
-
-    $(document).ready(function(){
-      var table = $('#example').DataTable({
-      orderCellsTop: true,
-      fixedHeader: true 
-      });
-
-      //Creamos una fila en el head de la tabla y lo clonamos para cada columna
-      $('#example thead td').clone(true).appendTo( '#example thead' );
-
-      $('#example thead tr:eq(1) th').each( function (i) {
-          var title = $(this).text(); //es el nombre de la columna
-          $(this).html( '<input type="text" placeholder="Filtrar.. '+title+'" />' );
-
-          $( 'input', this ).on( 'keyup change', function () {
-              if ( table.column(i).search() !== this.value ) {
-                  table
-                      .column(i)
-                      .search( this.value )
-                      .draw();
-              }
-          } );
-      } );   
-    });
-    </script>
+                        <?php 
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
           </div>
         </div>
       </section>

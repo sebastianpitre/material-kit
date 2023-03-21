@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-01-2021 a las 19:10:11
--- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.3.2
+-- Tiempo de generación: 25-10-2022 a las 07:02:54
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `jvh-tutoriales`
+-- Base de datos: `crud_bio`
 --
 
 -- --------------------------------------------------------
@@ -29,19 +28,32 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `alumno` (
-  `id_ave` int(11) NOT NULL,
-  `fotografia` varchar(11) NOT NULL,
-  `nombre_comun` varchar(20) NOT NULL,
-  `nombre_cientifico` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL,
+  `nombre_comun` varchar(50) NOT NULL,
+  `nombre_cientifico` varchar(50) NOT NULL,
+  `descripcion` varchar(50) NOT NULL,
+  `foto` longblob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `alumno`
+-- Índices para tablas volcadas
 --
 
-INSERT INTO `alumno` (`id_ave`, `fotografia`, `nombre_comun`, `nombre_cientifico`) VALUES
-(01, 'cogoyo.jpg', 'guacamaya', 'ara ararauna'),
-(03, 'perico.jpg', 'lore', 'loro real');
+--
+-- Indices de la tabla `alumno`
+--
+ALTER TABLE `alumno`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `alumno`
+--
+ALTER TABLE `alumno`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
