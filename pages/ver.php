@@ -1,20 +1,16 @@
-<!--
-=========================================================
-* <span class="text-dark font-weight-bold"><span class="text-success">Bio</span>Software</span> - v3.0.4
-=========================================================
-
-* Product Page:  https://www.creative-tim.com/product/material-kit 
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Coded by www.creative-tim.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<?php 
+    $id=$_GET['id'];
+    include "crud/config/bd.php";
+    $datos=ListarunAlumno($id);
+    $nombre_comun=$datos['nombre_comun'];
+    $nombre_cientifico=$datos['nombre_cientifico'];
+    $descripcion=$datos['descripcion'];
+    $foto=$datos['foto'];
+?>
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
+<meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/logo-bio.svg">
   <link rel="icon" type="image/png" href="../assets/img/logo-bio.svg">
@@ -37,20 +33,11 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
-
-  <!-- <script>
-    function consulta(){
-      var birdName = "<?php  echo $row['nombre_cientifico']?>";
-      alert(birdName);
-    }
-  </script> -->
 </head>
-
 <body class="about-us bg-gray-100">
-<?php
+    <?php
     include 'includes/nav.php';
     ?>
-
 
     <header>
       <div class="page-header min-vh-25" style="background-image: url(&quot;../assets/img/estrellas.jpg&quot;); background-position-y: 28%">
@@ -65,9 +52,8 @@
       </div>
       </header>
   <!-- -------- END HEADER 7 w/ text and video ------- -->
-  <div class="card card-body ">
 <!-- Estilos de animacion de texto -->
-      <style >
+    <style >
         .animate-text {
           letter-spacing: 0.075rem;
         }
@@ -105,80 +91,103 @@
           }
         }
         
-      </style>
-<!-- Escript de animacion de texto -->
-      <script>
-        //Primero capturamos el elemento del DOM con el id que definimos en el html
-        const text1 = document.getElementById("animate-text1");
-        let str = text1.innerHTML;
-        text1.innerHTML = "";
-
-        //Declaramos una varible en la que asignaremos un valor para que sea el tiempo en ms que durará la función setTimeout
-        const speed = 25;
-        let i = 0;
-
-        //Esta función recorre todos los caracteres nuestro texto
-        const typeWriter = () => {
-          if (i < str.length) {
-            text1.innerHTML += str.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
+        /*Esta animación crea un zoom con la imagen de fondo del hero*/
+        @keyframes zoom {
+          0% {
+            opacity: 0;
+            transform: scale(1.1);
           }
-        };
-
-        //Acá ejecutamos la función
-        setTimeout(typeWriter, speed);
-
-      </script>
-      <section class="pb-5 position-relative  mx-n3">
-        <div class="container">
-          <div class="row">
-                Lista de Especies.
-                <table id="example" class="display table">
-                    <thead>
-                        <tr>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center  ps-2"></th>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center  ps-2">Foto</th>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center  ps-2">nombre común</th>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center  ps-2">nombre científico</th>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center  ">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php 
-                            include "crud/config/bd.php";
-                            $query=listar();
-                            $enumeracion=0;
-                            while($datos=mysqli_fetch_assoc($query)){
-                                $enumeracion++;
-                                $id=$datos['id'];
-                                $foto=$datos['foto'];
-                                $nombre_comun=$datos['nombre_comun'];
-                                $nombre_cientifico=$datos['nombre_cientifico'];
-                        ?>
-                        <tr>
-                            <td><?= $enumeracion?></td>
-                            <td class="align-items-center"><img style="max-height:50px;" src="data:image/jpg;base64,<?= base64_encode($foto)?>"></td>
-                            <td ><?= $nombre_comun?></td>
-                            <td><?= $nombre_cientifico?></td>
-                            <td>
-                                <a class="btn btn-info" href="ver.php?id=<?=$id?>">Ver</a>
-                            </td>
-                        </tr>
-
-                        <?php 
-                            }
-                        ?>
-                    </tbody>
-                </table>
-                <script>$(document).ready(function() {
-                  $('#example').DataTable();
-                } );</script>
-        </div>
-    </div>
+          8% {
+            opacity: 1;
+          }
+          60% {
+            opacity: 1;
+          }
+          70% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        
+    </style>
+<!-- Escript de animacion de texto -->
+    
+    <div class="card bg-gray-100 card-body ">
+    <section class="pb-5 position-relative  mx-n3">
+    <div class="container card py-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="card p-0 rounded-3">
+          <img src="data:image/jpg;base64,<?=base64_encode($foto)?>" alt="fotografia" class="img-fluid shadow rounded-3">
           </div>
+          </div>
+      <div class="col-md-6 mb-md-0 mb-4">
+      <p >Nombre Científico.</p>
+      <h3><span class="me-2">•</span><em><?=$nombre_cientifico?></em></h3>
+      <p>Nombre Común.</p>
+        <h5><span class="me-2">•</span><?=$nombre_comun?></h3>
+        <h3 class="mb-0">Descripción.</h3>
+        <p><?=$descripcion?></p>
+      <form id="search-form">
+        <input class="auto" style="display: none" type="text" autoclip id="bird-name" value="<?=$nombre_cientifico?>" name="bird-name">
+        <button class=" btn btn-info" type="submit">escuchar</button>
+      </form>
+      <div id="results"></div>
+      
+  
+      <script>
+        const searchForm = document.getElementById('search-form');
+        const resultsDiv = document.getElementById('results');
+  
+        searchForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const birdName = encodeURIComponent(document.getElementById('bird-name').value);
+          const url = `https://xeno-canto.org/api/2/recordings?query=${birdName}`;
+          
+          fetch(url)
+            .then(response => response.json())
+            .then(data => {
+              if (data.recordings.length > 0) {
+                const recording = data.recordings[0];
+                resultsDiv.innerHTML = '';
+  
+               
+  
+                const audio = document.createElement('audio');
+                audio.setAttribute('controls', '');
+                const source = document.createElement('source');
+                source.setAttribute('src', recording.file);
+                audio.appendChild(source);
+                resultsDiv.appendChild(audio);
+  
+              } else {
+                resultsDiv.innerHTML = 'No se encontraron resultados.';
+              }
+            })
+            .catch(error => {
+              resultsDiv.innerHTML = `Ha ocurrido un error: ${error.message}`;
+            });
+        });
+      </script>
+      </div>
+      </div>
+      </div>
+    </section>
+    <!-- <div class="container">
+        <div class="bg-light w-50 m-auto p-3">
+            <div class="bg-primary p-2">
+                <a class="btn btn-warning btn-sm" href="index.php">Inicio</a>
+                <a class="btn btn-secondary btn-sm" href="editar.php?id=<?php echo $id ?>">Editar</a>
+                <a class="btn btn-danger btn-sm" href="acciones/eliminar.php?id=<?php echo $id ?>">Eliminar</a>
+            </div>
+            <h3 class="text-center"><?=$nombre_comun?></h3>
+            <p><strong>Correo : </strong> <?=$descripcion?></p>
+            <center><img src="data:image/jpg;base64,<?=base64_encode($foto)?>"></center>
         </div>
-      </section>
+    </div> -->
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
@@ -304,8 +313,59 @@
     }
   </script>
 
-  
-  
-</body>
+<script>
+        //Primero capturamos el elemento del DOM con el id que definimos en el html
+        const text1 = document.getElementById("animate-text1");
+        let str = text1.innerHTML;
+        text1.innerHTML = "";
 
+        //Declaramos una varible en la que asignaremos un valor para que sea el tiempo en ms que durará la función setTimeout
+        const speed = 25;
+        let i = 0;
+
+        //Esta función recorre todos los caracteres nuestro texto
+        const typeWriter = () => {
+          if (i < str.length) {
+            text1.innerHTML += str.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        };
+
+        //Acá ejecutamos la función
+        setTimeout(typeWriter, speed);
+
+    </script>
+    <script>
+    let temp = $("#btn1").clone();
+    $("#btn1").click(function(){
+      $("#btn1").after(temp);
+    });
+
+    $(document).ready(function(){
+      var table = $('#example').DataTable({
+      orderCellsTop: true,
+      fixedHeader: true 
+      });
+
+      //Creamos una fila en el head de la tabla y lo clonamos para cada columna
+      $('#example thead td').clone(true).appendTo( '#example thead' );
+
+      $('#example thead tr:eq(1) th').each( function (i) {
+          var title = $(this).text(); //es el nombre de la columna
+          $(this).html( '<input type="text" placeholder="Filtrar.. '+title+'" />' );
+
+          $( 'input', this ).on( 'keyup change', function () {
+              if ( table.column(i).search() !== this.value ) {
+                  table
+                      .column(i)
+                      .search( this.value )
+                      .draw();
+              }
+          } );
+      } );   
+    });
+    </script>
+
+</body>
 </html>

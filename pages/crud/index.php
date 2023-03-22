@@ -1,23 +1,11 @@
-<!--
-=========================================================
-* <span class="text-dark font-weight-bold"><span class="text-success">Bio</span>Software</span> - v3.0.4
-=========================================================
-
-* Product Page:  https://www.creative-tim.com/product/material-kit 
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Coded by www.creative-tim.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/logo-bio.svg">
-  <link rel="icon" type="image/png" href="../assets/img/logo-bio.svg">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/logo-bio.svg">
+  <link rel="icon" type="image/png" href="../../assets/img/logo-bio.svg">
   <title>
     Biosofware
   </title>
@@ -29,14 +17,15 @@
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
   <!-- Nucleo Icons -->
-  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
-  <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+  <link id="pagestyle" href="../../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+
 </head>
 
 <body class="about-us bg-gray-100">
@@ -44,8 +33,8 @@
     <div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
       <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
         <div class="container-fluid px-0">
-          <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
-            <img class="material-icons w-15 ps-1" src="../assets/img/logo-bio.svg" alt="">
+          <a class="navbar-brand font-weight-bolder ms-sm-3" href="../../index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
+            <img class="material-icons w-15 ps-1" src="../../assets/img/logo-bio.svg" alt="">
             <span class="text-dark font-weight-bold"><span class="text-success">Bio</span>Software</span>
           </a>
           <button class="navbar-toggler shadow-none ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +50,7 @@
                 <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="material-icons opacity-6 me-2 text-md">dashboard</i>
                   Pages
-                  <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                  <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
                 </a>
                 <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
                   <div class="d-none d-lg-block">
@@ -116,7 +105,7 @@
                 <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="material-icons opacity-6 me-2 text-md">view_day</i>
                   Sections
-                  <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                  <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
                   <div class="d-none d-lg-block">
@@ -127,7 +116,7 @@
                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Page Sections</h6>
                 <span class="text-sm">See all sections</span>
               </div>
-              <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+              <img src="../../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
             </div>
           </a>
           <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
@@ -147,7 +136,7 @@
                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Navigation</h6>
                 <span class="text-sm">See all navigations</span>
               </div>
-              <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+              <img src="../../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
             </div>
           </a>
           <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
@@ -170,7 +159,7 @@
                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Input Areas</h6>
                 <span class="text-sm">See all input areas</span>
               </div>
-              <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+              <img src="../../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
             </div>
           </a>
           <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
@@ -190,7 +179,7 @@
                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Attention Catchers</h6>
                 <span class="text-sm">See all examples</span>
               </div>
-              <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+              <img src="../../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
             </div>
           </a>
           <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
@@ -214,7 +203,7 @@
                 <span class="text-sm">See all elements</span>
               </div>
       
-              <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+              <img src="../../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
             </div>
           </a>
           <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
@@ -369,7 +358,7 @@
                 <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="material-icons opacity-6 me-2 text-md">article</i>
                   Docs
-                  <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                  <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
                   <div class="d-none d-lg-block">
@@ -460,7 +449,7 @@
     <!-- End Navbar -->
 
     <header>
-      <div class="page-header min-vh-25" style="background-image: url(&quot;../assets/img/estrellas.jpg&quot;); background-position-y: 28%">
+      <div class="page-header min-vh-25" style="background-image: url(&quot;../../assets/img/estrellas.jpg&quot;); background-position-y: 28%">
       <span class="mask bg-dark opacity-4"></span>
       <div class="container">
       <div class="row">
@@ -471,311 +460,71 @@
       </div>
       </div>
       </header>
-  <!-- -------- END HEADER 7 w/ text and video ------- -->
-<!-- Estilos de animacion de texto -->
-    <style >
-        .animate-text {
-          letter-spacing: 0.075rem;
-        }
-        
-        /*Para simular el cursor del teclado usamos la siguiente pseudoclase con una animación que pueden ver en la parte final del código CSS*/
-        .animate-text::after {
-          content: "|";
-          font-size: 1.6rem;
-          font-family: "Inconsolata", monospace;
-          animation-name: parpadeo;
-          animation-duration: 1s;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-        }
-        .zoom {
-          animation: zoom 8s 0s;
-        }
-        
-        /*Esta animación imita el parpadeo del cursor del teclado*/
-        @keyframes parpadeo {
-          0% {
-            opacity: 1;
-          }
-          20% {
-            opacity: 1;
-          }
-          25% {
-            opacity: 0;
-          }
-          90% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-        
-        /*Esta animación crea un zoom con la imagen de fondo del hero*/
-        @keyframes zoom {
-          0% {
-            opacity: 0;
-            transform: scale(1.1);
-          }
-          8% {
-            opacity: 1;
-          }
-          60% {
-            opacity: 1;
-          }
-          70% {
-            opacity: 1;
-            transform: scale(1);
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-        
-    </style>
-<!-- Escript de animacion de texto -->
-    <script>
-        //Primero capturamos el elemento del DOM con el id que definimos en el html
-        const text1 = document.getElementById("animate-text1");
-        let str = text1.innerHTML;
-        text1.innerHTML = "";
+    <div class="container">
+        <div class="row p-2">
+            <div class="col-3">
+                <form action="acciones/insertar.php" method="POST" enctype="multipart/form-data">
+                    <h3 class="text-center">lista de especies.</h3>
+                    <label>nombre común</label>
+                    <input class='form-control' type="text" name="nombre_comun" >
+                    <label>nombre científico</label>
+                    <input class='form-control' type="text" name="nombre_cientifico" >
+                    <label>descripción</label>
+                    <input class='form-control' type="descripcion" name="descripcion" >
+                    <label>Foto del alumno</label>
+                    <input class='form-control' type="file" name="foto" >
+                    <button class="btn btn-primary mt-2" type="submit">Registrar</button>
+                </form>
+            </div>
+            <div class="col-9">
+                Lista de alumnos
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Foto</th>
+                            <th>nombre común</th>
+                            <th>nombre científico</th>
+                            <th>descripción</th>
+                            
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php 
+                            include "config/bd.php";
+                            $query=listar();
+                            $enumeracion=0;
+                            while($datos=mysqli_fetch_assoc($query)){
+                                $enumeracion++;
+                                $id=$datos['id'];
+                                $foto=$datos['foto'];
+                                $nombre_comun=$datos['nombre_comun'];
+                                $nombre_cientifico=$datos['nombre_cientifico'];
+                                $correo=$datos['descripcion'];
+                                
+                            
+                        ?>
+                        <tr>
+                            <td><?= $enumeracion?></td>
+                            <td><img style="max-height:50px;" src="data:image/jpg;base64,<?= base64_encode($foto)?>"></td>
+                            <td><?= $nombre_comun?></td>
+                            <td><?= $nombre_cientifico?></td>
+                            <td><?= $correo?></td>
+                            <td>
+                                <a class="btn btn-info" href="ver.php?id=<?=$id?>">Ver</a>
+                                <a class="btn btn-warning" href="editar.php?id=<?=$id?>">Actualizar</a>
+                                <a class="btn btn-danger" href="acciones/eliminar.php?id=<?=$id?>">Eliminar</a>
+                            </td>
+                        </tr>
 
-        //Declaramos una varible en la que asignaremos un valor para que sea el tiempo en ms que durará la función setTimeout
-        const speed = 25;
-        let i = 0;
-
-        //Esta función recorre todos los caracteres nuestro texto
-        const typeWriter = () => {
-          if (i < str.length) {
-            text1.innerHTML += str.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-          }
-        };
-
-        //Acá ejecutamos la función
-        setTimeout(typeWriter, speed);
-
-    </script>
-    <script>
-    let temp = $("#btn1").clone();
-    $("#btn1").click(function(){
-      $("#btn1").after(temp);
-    });
-
-    $(document).ready(function(){
-      var table = $('#example').DataTable({
-      orderCellsTop: true,
-      fixedHeader: true 
-      });
-
-      //Creamos una fila en el head de la tabla y lo clonamos para cada columna
-      $('#example thead td').clone(true).appendTo( '#example thead' );
-
-      $('#example thead tr:eq(1) th').each( function (i) {
-          var title = $(this).text(); //es el nombre de la columna
-          $(this).html( '<input type="text" placeholder="Filtrar.. '+title+'" />' );
-
-          $( 'input', this ).on( 'keyup change', function () {
-              if ( table.column(i).search() !== this.value ) {
-                  table
-                      .column(i)
-                      .search( this.value )
-                      .draw();
-              }
-          } );
-      } );   
-    });
-    </script>
-    <div class="card card-body ">
-    <section class="pb-5 position-relative  mx-n3">
-    <div class="container py-5">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <div class="card p-0 rounded-3">
-          <img src="" alt="fotografia" class="img-fluid shadow rounded-3">
-          </div>
-          </div>
-      <div class="col-md-6 mb-md-0 mb-4">
-      <h4 class="mb-0">Nombre Científico.</h4>
-      <h3><span class="me-2">-</span><em><?php  echo $row['nombre_cientifico']?></em></h3>
-        <h4 class="mb-0">Nombre Común.</h4>
-        <h5><span class="me-2">-</span><?php  echo $row['nombre_comun']?></h3>
-        <h4 class="mb-0">Descripción.</h4>
-        <p class="font-weight-bold">Esta pava casi amenazada es la única pava negra relativamente grande que habita en zonas montañosas. Se distribuye desde Venezuela a través de los andes hasta el centro-sur de Perú, también en la sierra nevada de Santa Marta en Colombia, país donde se distribuye de 400-2500m (Strewe, R. y C. Navarro, 2003).</p>
-      <form id="search-form">
-        <label for="bird-name">Nombre del ave:</label>
-        <input type="text" id="bird-name" value="Aburria aburri" name="bird-name">
-        <button type="submit">Buscar</button>
-      </form>
-      <div id="results"></div>
-  
-      <script>
-        const searchForm = document.getElementById('search-form');
-        const resultsDiv = document.getElementById('results');
-  
-        searchForm.addEventListener('submit', (event) => {
-          event.preventDefault();
-          const birdName = encodeURIComponent(document.getElementById('bird-name').value);
-          const url = `https://xeno-canto.org/api/2/recordings?query=${birdName}`;
-          
-          fetch(url)
-            .then(response => response.json())
-            .then(data => {
-              if (data.recordings.length > 0) {
-                const recording = data.recordings[0];
-                resultsDiv.innerHTML = '';
-  
-                const title = document.createElement('h3');
-                title.textContent = recording.en;
-                resultsDiv.appendChild(title);
-  
-                const audio = document.createElement('audio');
-                audio.setAttribute('controls', '');
-                const source = document.createElement('source');
-                source.setAttribute('src', recording.file);
-                audio.appendChild(source);
-                resultsDiv.appendChild(audio);
-  
-              } else {
-                resultsDiv.innerHTML = 'No se encontraron resultados.';
-              }
-            })
-            .catch(error => {
-              resultsDiv.innerHTML = `Ha ocurrido un error: ${error.message}`;
-            });
-        });
-      </script>
-      </div>
-      </div>
-      </div>
-    </section>
-  <!--   Core JS Files   -->
-  <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
-  <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
-  <script src="../assets/js/plugins/countup.min.js"></script>
-  <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
-  <script src="../assets/js/plugins/parallax.min.js"></script>
-  <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-  <script src="../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="tabla.js"></script>
-<script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script> 
-  
-    <script type="text/javascript">
-    if (document.getElementById('state1')) {
-      const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
-      if (!countUp.error) {
-        countUp.start();
-      } else {
-        console.error(countUp.error);
-      }
-    }
-    if (document.getElementById('state2')) {
-      const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
-      if (!countUp1.error) {
-        countUp1.start();
-      } else {
-        console.error(countUp1.error);
-      }
-    }
-    
-    if (document.getElementById('state3')) {
-      const countUp1 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
-      if (!countUp1.error) {
-        countUp1.start();
-      } else {
-        console.error(countUp1.error);
-      }
-    }
-    
-    if (document.getElementById('state4')) {
-      const countUp1 = new CountUp('state4', document.getElementById("state4").getAttribute("countTo"));
-      if (!countUp1.error) {
-        countUp1.start();
-      } else {
-        console.error(countUp1.error);
-      }
-    }
-    
-    if (document.getElementById('state5')) {
-      const countUp1 = new CountUp('state5', document.getElementById("state5").getAttribute("countTo"));
-      if (!countUp1.error) {
-        countUp1.start();
-      } else {
-        console.error(countUp1.error);
-      }
-    }
-    
-    if (document.getElementById('state6')) {
-      const countUp1 = new CountUp('state6', document.getElementById("state6").getAttribute("countTo"));
-      if (!countUp1.error) {
-        countUp1.start();
-      } else {
-        console.error(countUp1.error);
-      }
-    }
-    
-    if (document.getElementById('state7')) {
-      const countUp1 = new CountUp('state7', document.getElementById("state7").getAttribute("countTo"));
-      if (!countUp1.error) {
-        countUp1.start();
-      } else {
-        console.error(countUp1.error);
-      }
-    }
-    
-    if (document.getElementById('state8')) {
-      const countUp1 = new CountUp('state8', document.getElementById("state8").getAttribute("countTo"));
-      if (!countUp1.error) {
-        countUp1.start();
-      } else {
-        console.error(countUp1.error);
-      }
-    }
-    if (document.getElementById('state9')) {
-      const countUp2 = new CountUp('state9', document.getElementById("state9").getAttribute("countTo"));
-      if (!countUp2.error) {
-        countUp2.start();
-      } else {
-        console.error(countUp2.error);
-      };
-    }
-
-    var el = document.getElementById('navbarPresentationShadow');
-    var distance = 58;
-
-    function scrollNavbarShadow() {
-      if (this.pageYOffset > distance) {
-        el.classList.remove('shadow-none');
-        el.classList.add('shadow');
-      } else {
-        el.classList.add('shadow-none');
-        el.classList.remove('shadow');
-      }
-    }
-
-    window.addEventListener("scroll", function() {
-      scrollNavbarShadow();
-    });
-  </script>
-  <script>
-    if (document.getElementsByClassName('page-header')) {
-      window.onscroll = debounce(function() {
-        var scrollPosition = window.pageYOffset;
-        var bgParallax = document.querySelector('.page-header');
-        var oVal = (window.scrollY / 3);
-        bgParallax.style.transform = 'translate3d(0,' + oVal + 'px,0)';
-      }, 6);
-    }
-  </script>
-
-  
+                        <?php 
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>

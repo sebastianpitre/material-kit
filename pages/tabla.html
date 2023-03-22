@@ -20,17 +20,18 @@
 <body>
 <link rel="stylesheet" href="tabla.css">
 
-<table id="example" class="display" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                </thead>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Foto</th>
+            <th>nombre común</th>
+            <th>nombre científico</th>
+            <th>descripción</th>
+            
+            <th>Acciones</th>
+        </tr>
+    </thead>
                 <tbody>
                     <?php
                     while($row=mysqli_fetch_array($query)){
