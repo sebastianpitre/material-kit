@@ -129,8 +129,8 @@
       <h3><span class="me-2">•</span><em><?=$nombre_cientifico?></em></h3>
       <p>Nombre Común.</p>
         <h5><span class="me-2">•</span><?=$nombre_comun?></h3>
-        <h3 class="mb-0">Descripción.</h3>
-        <p><?=$descripcion?></p>
+        <p class="mb-1">Descripción.</p>
+        <p><small><?=$descripcion?></small></p>
       <form id="search-form">
         <input class="auto" style="display: none" type="text" autoclip id="bird-name" value="<?=$nombre_cientifico?>" name="bird-name">
         <button class=" btn btn-info" type="submit">escuchar</button>

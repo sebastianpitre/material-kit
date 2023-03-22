@@ -21,7 +21,7 @@
   <title>
     Biosofware
   </title>
-  <link rel="stylesheet" href="tabla.css">
+  <link rel="stylesheet" href="../assets/css/tabla.css">
 
   <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -193,7 +193,7 @@
   <script src="../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="tabla.js"></script>
+<script src="../assets/js/tabla.js"></script>
 <script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script> 
   
     <script type="text/javascript">
